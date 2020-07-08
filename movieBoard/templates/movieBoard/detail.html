@@ -1,0 +1,55 @@
+{% extends 'movieBoard/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row movie-item" style="margin:20px auto;">
+        <div class="col-sm-12" >
+            <div class="card border-secondary">
+                <div class="card-body">
+                    <h3>{{ item.name }}</h3>
+                    <p>
+                        {{ item.kind }}
+                    </p>
+                    <p>
+                        {{ item.actor }}
+                    </p>
+                    <p>
+                        <a href="{{ item.address }}">{{ item.address }}</a>
+                    </p>
+                    <p>
+                        {{ item.explain }}
+                    </p>
+                    <p>
+                        <a href="{% url 'movie-delete' %}?id={{ item.id }}">
+                            <button class="btn btn-danger">削除する</button>
+                        </a>
+                    </p>
+                   <hr/>
+                    <p>
+                        <a href="{% url 'review-create' movie_id=item.id %}">
+                            <button class="btn btn-warning">レビューする</button>
+                        </a>
+                    </p>
+                    {% for review in reviews %}
+                        <div class="card bg-light mb-3">
+                          <div class="card-header"><b>{{ review.point }}</b>점
+                            <a href="{% url 'review-delete' movie_id=item.id review_id=review.id %}">
+                                <button type="button" class="close" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <p class="card-text">{{ review.comment }}</p>
+                          </div>
+                        </div>
+                    {% endfor %}
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
