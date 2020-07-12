@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'movieTable',
         'USER': 'postgres',
         'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'HOST': '',
         'PORT': '5432',
     }
 }
