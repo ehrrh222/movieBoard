@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'movie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'movieTable',
         'USER': 'postgres',
         'PASSWORD': '1234',
