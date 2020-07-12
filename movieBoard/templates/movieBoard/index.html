@@ -1,10 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+<html>
+	<head>
+		<title>MOVIE見よう</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/css/main.css?ver=1" />
+	</head>
+	<body id="top">
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<h1>MOVIE見よう</h1>
+							<p>Djangoを使ってSERVICEするけ掲示板<br />
+							AWSを使って配布</p>
+						</header>
+						<a href="#main" class="more">Learn More</a>
+					</div>
+				</section>
 
-</body>
+			<!-- Main -->
+				<div id="main">
+					<div class="inner">
+
+					<!-- Boxes -->
+						<div class="thumbnails">
+
+							<div class="box">
+								<a class="image fit"><img src="../static/images/main01.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>ホーム</h3>
+									<p>ホームのメインに戻る</p>
+									<a href="/movieBoard" class="button fit" data-poptrox="youtube,800x400">ホームヘ</a>
+								</div>
+							</div>
+
+							<div class="box">
+								<a class="image fit"><img src="../static/images/main02.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>映画リスト</h3>
+									<p>作成された映画リストのページを表示する</p>
+									<a href="/movieBoard/list" class="button style2 fit" data-poptrox="youtube,800x400">リストヘ</a>
+								</div>
+							</div>
+
+							<div class="box">
+								<a class="image fit"><img src="../static/images/main03.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>映画の追加</h3>
+									<p>新しい映画リストを作成</p>
+									<a href="/movieBoard/create" class="button style3 fit" data-poptrox="youtube,800x400">追加ヘ</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<p></p>
+						<p></p>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.scrolly.min.js"></script>
+			<script src="../static/js/jquery.poptrox.min.js"></script>
+			<script src="../static/js/skel.min.js"></script>
+			<script src="../static/js/main.js"></script>
+			<script src="../static/js/util.js"></script>
+
+	</body>
 </html>
